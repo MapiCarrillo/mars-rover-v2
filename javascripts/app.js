@@ -58,11 +58,6 @@ function turnLeft(rover){
   }
   console.log("La dirección del Rover es: ", rover.direction);
 }
-//turnLeft(robot)
-//turnLeft(robot)
-//turnLeft(robot)
-//turnLeft(robot)
-
 function turnRight(rover){
   switch (rover.direction){
     case 'N':
@@ -80,53 +75,27 @@ function turnRight(rover){
   }
   console.log("La dirección del Rover es:", rover.direction);
 }
-//turnRight(robot)
-//turnRight(robot)
-//turnRight(robot)
-//turnRight(robot)
-
 function moveForward(rover){
   switch (rover.direction){
     case "W":
     rover.position[0]--;
       if(rover.position[0]<0) rover.position[0] = 9;
       break;
-    /*rover.position [x]--;
-    break;*/
     case "N":
     rover.position[1]++;
        if(rover.position[1]>9) rover.position[1] = 0;
       break;
-    /*rover.position [y]--;
-    break;*/
     case "S":
     rover.position[1]--;
         if(rover.position[1]<0) rover.position[1] = 9;
       break;
-    /*rover.position [y]++;
-    break;*/
     case "E":
     rover.position[0]++;
         if(rover.position[0]>9) rover.position[0] = 0;
       break;
-    /*rover.position [x]++;
-    break; */
   }
   console.log("El Rover está en: ", rover.position)
   }
-  /*{
-  if (rover.direction === "W"){
-    rover.position [x] -= 1;
-  }
-  else if( rover.direction==="N"){
-    rover.position [y] -= 1;
-  }
-  else if(rover.direction === "S"){
-   rover.position [y] += 1;
-  }
-  console.log("El rover está en: ", rover.position)
-}*/
-//moveForward(robot)
 function moveBackward(rover){
   switch (rover.direction){
     case "W":
@@ -179,13 +148,6 @@ for(var i = 0; i < inst.length ; i++){
 }
 console.log(rover.travelLog);
 }
-
-//commands(robot, "rffrfflfrff")
-
-/*if (robot.position[0] === "o" || robot.position[1] === "o"){
-  moveBackward(rover);
-  console.log("Ahí hay un obstaculo, prueba con otro movimiento");
-}*/
 function stopObstacles (rover){
   if (
       (rover.ob1[0] === rover.position[0]) && (rover.ob1[1] === rover.position[1]) || 
@@ -205,12 +167,3 @@ function crash(rover1, rover2){
     console.log ("El Rover 2 está ahí, prueba otro movimiento");
   }
 }
-
-/*function crash(rover, rover2){
-  if (
-    (rover.position[0] === rover2.position[0]) && (rover.position[1] === rover2.position[1])
-  ){
-    console.log ("El Rover 2 está ahí, prueba otro movimiento");
-  }
-}*/
-// 
